@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 		xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	    http://www.springframework.org/schema/beans/spring-beans.xsd">
+	    <bean id="goodsdao" class="com.goodsmanager.dao.impl.GoodsDaoImpl"></bean>
+	    <bean id="goodsservice" class="com.goodsmanager.service.impl.GoodsServiceImpl">
+	    <property name="dao" ref="goodsdao"></property>
+	    </bean>
+	    </beans>
+		

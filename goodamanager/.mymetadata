@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="goodamanager"
+  id="myeclipse.1528604292772"
+  context-root="/maven-web-demo"
+  j2ee-spec="1.7"
+  archive="goodamanager.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

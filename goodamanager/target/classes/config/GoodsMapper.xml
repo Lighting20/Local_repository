@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<mapper namespace="GoodsMapper">
+  <select id="selectAll"  resultType="com.goodsmanager.entity.Goods">
+    SELECT * FROM goods order by  id desc 
+  </select><!-- 查找所有商品 -->
+  <select id="selectByGoodsname" parameterType="string" resultTypee="com.goodsmanager.entity.Goods">
+  select * from goods where name=#{_parameter}
+  </select><!-- 根据商品名查找 -->
+  <insert id="insertGoods" parameterType="com.goodsmanager.entity.Goods">
+  insert into goods(name,type,price,mount,note)	
+  values(#{name},#{type},#{price},#{mount},#{note})
+  </insert><!-- 增加商品 -->
+  <update id="updateGoods" parameterType="int">
+  update goods set name=#{name},type=#{type},price=#{price},mount=#{mount},note=#{note} where id=#{id}
+  </update><!-- 修改商品信息 -->
+  <delete id="deleteGoods" parameterType="int">
+  delete from goods where id=#{_parameter}
+  </delete><!-- 删除商品信息 -->
+</mapper>

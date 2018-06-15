@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<mapper namespace="GoodsTypeMapper">
+  <select id="selectAll" resultType="com.goodsmanager.entity.GoodsType">
+    SELECT * FROM goodstype order by desc
+  </select><!-- 查看所有类型 -->
+   <select id="selectById" parameterType="int" resultType="com.goodsmanager.entity.GoodsType">
+    SELECT * FROM goodstype where id=#{_parameter}
+  </select><!-- 根据ID查找类型 -->
+  <select id="insertGoodsType" parameterType="com.goodsmanager.entity.GoodsType">
+  insert into goodstype(typeid,typename)values(#{typeid},#{typename})
+  </select><!-- 增加商品类型 -->
+  <select id="deleteGoodsType" parameterType="int">
+  delete from goodstype where typeid=#{typeid}
+  </select><!-- 删除商品类型 -->
+  <select id="updateGoodsType" parameterType="typeid">
+  update goodstype set typeid=#{typeid},typename=#{typename} where typeid=#{typeid}
+  </select><!-- 修改商品信息 -->
+</mapper>
